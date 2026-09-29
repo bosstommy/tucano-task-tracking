@@ -11,6 +11,10 @@ export const DB_PATH = path.join(DATA_DIR, 'tucano.db')
 
 fs.mkdirSync(DATA_DIR, { recursive: true })
 
+// Primo avvio: si parte da un database d'esempio (una sola attività) incluso nel repository.
+const TEMPLATE_DB = path.join(ROOT, 'seed', 'tucano.example.db')
+if (!fs.existsSync(DB_PATH) && fs.existsSync(TEMPLATE_DB)) fs.copyFileSync(TEMPLATE_DB, DB_PATH)
+
 export const db = new Database(DB_PATH)
 db.pragma('journal_mode = WAL')
 db.pragma('foreign_keys = ON')
