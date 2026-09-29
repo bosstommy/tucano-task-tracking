@@ -9,6 +9,7 @@ React + Node + SQLite, tutto in locale sul tuo PC.
 Chiudi la finestra nera per spegnerlo.
 
 Sviluppo (ricarica automatica): `npm run dev` → http://localhost:5173
+Primo avvio: il database si crea da solo e parte vuoto. Per provare l'app con qualche attività d'esempio: `npm run seed` (non tocca un database che ha già dati).
 Test: `npm test` · Prove su dati separati: `npm run dev:test` (cartella `.testdata`, porta 3002)
 
 ## Barra rapida (tasto `N` o `Ctrl+K`)
@@ -66,6 +67,6 @@ diventa *a rischio* se è in corso ma il lavoro rimasto non ci sta più, *in rit
 
 ## Dati
 
-- Database: `data/tucano.db`
+- Database: `data/tucano.db` (creato al primo avvio, non incluso nel repository: è personale)
 - Backup automatico giornaliero in `backups/` (ultimi 14) + pulsante "Backup adesso"
 - Export JSON / CSV (Excel) da Impostazioni

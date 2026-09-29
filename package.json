@@ -11,6 +11,8 @@
     "serve": "cross-env NODE_ENV=production tsx server/index.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
+    "seed": "tsx server/seed.ts",
+    "seed:test": "cross-env TUCANO_DATA=.testdata tsx server/seed.ts",
     "dev:test": "cross-env TUCANO_PORT=3002 TUCANO_DATA=.testdata npm run dev"
   },
   "dependencies": {
@@ -42,4 +44,4 @@
     "vite": "^8.3.1",
     "vitest": "^5.0.2"
   }
-}
+}

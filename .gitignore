@@ -1,0 +1,8 @@
+node_modules
+dist
+data/*.db*
+backups/*.db
+.testdata
+.claude/
+.env*
+*.log
